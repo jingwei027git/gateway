@@ -2,7 +2,6 @@ package com.softpower.gateway.controller;
 
 import com.softpower.gateway.model.Data;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
