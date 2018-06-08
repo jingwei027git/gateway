@@ -1,5 +1,6 @@
 package com.softpower.gateway.config;
 
+import java.time.LocalDate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -19,6 +20,7 @@ public class Swagger2Config {
   public Docket createRestApi() {
     return new Docket(DocumentationType.SWAGGER_2)
         .apiInfo(apiInfo())
+        .directModelSubstitute(LocalDate.class, String.class)
         .select()
         .apis(RequestHandlerSelectors.basePackage("com.softpower.gateway"))
         .paths(PathSelectors.any())
